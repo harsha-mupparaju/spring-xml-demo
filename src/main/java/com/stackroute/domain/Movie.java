@@ -1,15 +1,19 @@
 package com.stackroute.domain;
 
 public class Movie {
-  Actor actorInfo;
+  Actor actor;
 
 
-    public void setActorInfo(Actor actorInfo) {
+   public Movie(Actor actor) {
+        this.actor = actor; }
+
+
+   /*   public void setActorInfo(Actor actorInfo) {
         this.actorInfo = actorInfo;
-    }
+    }*/
 
     public void displayMovieInfo(){
-        System.out.println("actorName = " + actorInfo.getActorName()+" "+ "actorGender = " + actorInfo.getActorGender() +" "
-               + "actorAge = " + actorInfo.getActorAge());
+        System.out.println("Actor Name = " + actor.getActorName() + " ,Actor gender = " + actor.getActorGender()
+         + " ,Actor Age = " + actor.getActorAge());
     }
 }
