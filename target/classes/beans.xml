@@ -40,6 +40,7 @@
    <constructor-arg name="actor" ref="actor1"></constructor-arg>
     </bean>
 
+
 <!-- after removing autowire byType-->
    <!-- <bean name="movie1" class="com.stackroute.domain.Movie" scope="prototype">
         <constructor-arg  name="actor" ref="actor1"></constructor-arg >
