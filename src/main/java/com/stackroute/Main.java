@@ -28,8 +28,8 @@ public class Main {
         Movie movieInfo4 =context.getBean("movie4",Movie.class);
         movieInfo4.displayMovieInfo();
 
-        System.out.println(movieInfo1==movieInfo2);
-        System.out.println(movieInfo1.equals(movieInfo4));
+      System.out.println(movieInfo1==movieInfo2);
+       // System.out.println(movieInfo1.equals(movieInfo4));
     }
 
 }
