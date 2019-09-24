@@ -3,6 +3,7 @@ package com.stackroute;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
@@ -15,9 +16,10 @@ public class Main {
        Movie movie=factory.getBean("movie",Movie.class);
         movie.displayMovieInfo();
 */
-        ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+        AbstractApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
           Movie movieInfo1 =  context.getBean("movie1",Movie.class);
           movieInfo1.displayMovieInfo();
+          context.registerShutdownHook();
 
           Movie movieInfo2=context.getBean("movie2",Movie.class);
           movieInfo2.displayMovieInfo();
@@ -28,7 +30,7 @@ public class Main {
         Movie movieInfo4 =context.getBean("movie4",Movie.class);
         movieInfo4.displayMovieInfo();
 
-      System.out.println(movieInfo1==movieInfo2);
+   //   System.out.println(movieInfo1==movieInfo2);
        // System.out.println(movieInfo1.equals(movieInfo4));
     }
 

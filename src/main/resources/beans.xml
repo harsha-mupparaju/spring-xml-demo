@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="com.stackroute.demo.BeanLifeCycleDemo" init-method="customInit" destroy-method="customDestroy"></bean>
     <!--property based object injection-->
 
 
