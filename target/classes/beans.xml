@@ -5,6 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="com.stackroute.demo.BeanLifeCycleDemo" init-method="customInit" destroy-method="customDestroy"></bean>
+    <bean class="com.stackroute.demo.BeanPostProcessorDemo"></bean>
     <!--property based object injection-->
 
 
